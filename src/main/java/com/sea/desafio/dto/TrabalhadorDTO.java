@@ -1,7 +1,5 @@
 package com.sea.desafio.dto;
 
-import org.springframework.beans.BeanUtils;
-
 import com.sea.desafio.entidades.Trabalhador;
 
 public class TrabalhadorDTO {
