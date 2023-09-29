@@ -34,11 +34,11 @@ public class TrabalhadorService {
 	}
 	
 	 @Transactional
-	    public Trabalhador cadastrar(Trabalhador trabalhador) throws SetorDuplicadoException {
-	    	Trabalhador trabalhadorRegistrado = trabalhadorRepository.findByCpf(trabalhador.getCpf());
-	        if (trabalhadorRegistrado != null) {
-	            throw new TrabalhadorDuplicadoException("Já existe um trabalhador com o cpf: " + trabalhador.getCpf());
-	        }
-	        return trabalhadorRepository.save(trabalhador);
-	    }
+    public Trabalhador cadastrar(Trabalhador trabalhador) throws SetorDuplicadoException {
+    	Trabalhador trabalhadorRegistrado = trabalhadorRepository.findByCpf(trabalhador.getCpf());
+        if (trabalhadorRegistrado != null) {
+            throw new TrabalhadorDuplicadoException("Já existe um trabalhador com o cpf: " + trabalhador.getCpf());
+        }
+        return trabalhadorRepository.save(trabalhador);
+    }
 }

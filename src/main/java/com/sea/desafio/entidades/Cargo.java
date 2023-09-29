@@ -54,6 +54,8 @@ public class Cargo {
 	}
 	
 	public Setor getSetor() {
+		if(this.setor == null)
+			this.setor = new Setor();
 		return setor;
 	}
 

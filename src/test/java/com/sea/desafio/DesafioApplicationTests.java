@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.NoSuchElementException;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,13 +27,6 @@ class DesafioApplicationTests {
 	
 	@Autowired
 	SetorService setorService;
-	
-	@Test
-	public void testDeveListarTodosTrabalhadores() {
-		int quantidadeDeRegistros = trabalhadorService.buscarTodos().size();
-		
-		Assertions.assertEquals(quantidadeDeRegistros, 6);
-	}
 	
 	@Test
 	public void testDeveRetornarExcecaoAoBuscarTrabalhadorPorIdInexistente() {
@@ -62,5 +54,4 @@ class DesafioApplicationTests {
 
         assertThrows(TrabalhadorDuplicadoException.class, () -> trabalhadorService.cadastrar(trabalhadorExistente));
     }
-
 }

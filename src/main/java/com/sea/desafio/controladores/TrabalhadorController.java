@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sea.desafio.dto.TrabalhadorDTO;
-import com.sea.desafio.entidades.Setor;
 import com.sea.desafio.entidades.Trabalhador;
 import com.sea.desafio.services.TrabalhadorService;
 
