@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sea.desafio.dto.TrabalhadorDTO;
 import com.sea.desafio.entidades.Trabalhador;
+import com.sea.desafio.exception.SetorDuplicadoException;
+import com.sea.desafio.exception.TrabalhadorDuplicadoException;
 import com.sea.desafio.repositorios.TrabalhadorRepository;
 
 @Service
@@ -30,4 +32,13 @@ public class TrabalhadorService {
 
 	    return new TrabalhadorDTO(trabalhador);
 	}
+	
+	 @Transactional
+	    public Trabalhador cadastrar(Trabalhador trabalhador) throws SetorDuplicadoException {
+	    	Trabalhador trabalhadorRegistrado = trabalhadorRepository.findByCpf(trabalhador.getCpf());
+	        if (trabalhadorRegistrado != null) {
+	            throw new TrabalhadorDuplicadoException("Já existe um trabalhador com o cpf: " + trabalhador.getCpf());
+	        }
+	        return trabalhadorRepository.save(trabalhador);
+	    }
 }

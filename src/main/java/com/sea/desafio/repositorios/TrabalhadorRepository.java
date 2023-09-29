@@ -6,4 +6,5 @@ import com.sea.desafio.entidades.Trabalhador;
 
 public interface TrabalhadorRepository extends JpaRepository<Trabalhador, Long>{
 
+	Trabalhador findByCpf(String cpf);
 }
