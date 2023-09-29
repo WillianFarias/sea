@@ -7,7 +7,7 @@ public class TrabalhadorDTO {
 	private Long id;
 	private String cpf;
 	private String nome;
-	private CargoMinDTO cargo;
+	private CargoDTO cargo;
 	
 	public TrabalhadorDTO() {}
 
@@ -15,7 +15,7 @@ public class TrabalhadorDTO {
 		id = trabalhador.getId();
 		cpf = trabalhador.getCpf();
 		nome = trabalhador.getNome();
-		cargo = new CargoMinDTO(trabalhador.getCargo());
+		cargo = new CargoDTO(trabalhador.getCargo());
 	}
 
 	public Long getId() {
@@ -30,7 +30,7 @@ public class TrabalhadorDTO {
 		return nome;
 	}
 
-	public CargoMinDTO getCargo() {
+	public CargoDTO getCargo() {
 		return cargo;
 	}
 

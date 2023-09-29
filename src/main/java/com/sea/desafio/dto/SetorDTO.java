@@ -2,14 +2,14 @@ package com.sea.desafio.dto;
 
 import com.sea.desafio.entidades.Setor;
 
-public class SetorMinDTO {
+public class SetorDTO {
 
 	private Long id;
 	private String nome;
 	
-	public SetorMinDTO () {}
+	public SetorDTO () {}
 
-	public SetorMinDTO(Setor setor) {
+	public SetorDTO(Setor setor) {
 		id = setor.getId();
 		nome = setor.getNome();
 	}
