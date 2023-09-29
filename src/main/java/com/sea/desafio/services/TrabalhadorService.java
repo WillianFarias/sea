@@ -30,5 +30,4 @@ public class TrabalhadorService {
 
 	    return new TrabalhadorDTO(trabalhador);
 	}
-
 }

@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sea.desafio.dto.TrabalhadorDTO;
 import com.sea.desafio.services.TrabalhadorService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping(value = "/trabalhadores")
 public class TrabalhadorController {
@@ -26,6 +30,9 @@ public class TrabalhadorController {
 	}
 	
 	@GetMapping(value = "/{id}")
+	@ApiOperation("Busca trabalhadores por id")
+	@ApiResponses(value = {@ApiResponse(code = 404, message = "Trabalhador não encontrado"),
+            @ApiResponse(code = 200, message = "Trabalhador localizado")})
 	public ResponseEntity<TrabalhadorDTO> buscarPorId(@PathVariable Long id) {
 	    try {
 	        TrabalhadorDTO trabalhador = trabalhadorService.buscarPorId(id);
