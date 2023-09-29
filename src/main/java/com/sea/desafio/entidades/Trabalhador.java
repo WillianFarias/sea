@@ -28,10 +28,19 @@ public class Trabalhador {
 	
 	public Trabalhador() {}
 	
-	public Trabalhador(String cpf, String nome, Cargo cargo) {
+	public Trabalhador(Long id, String cpf, String nome, Cargo cargo) {
+		this.id = id;
 		this.cpf = cpf;
 		this.nome = nome;
 		this.cargo = cargo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getCpf() {
@@ -60,7 +69,7 @@ public class Trabalhador {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cpf);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -72,6 +81,6 @@ public class Trabalhador {
 		if (getClass() != obj.getClass())
 			return false;
 		Trabalhador other = (Trabalhador) obj;
-		return Objects.equals(cpf, other.cpf);
+		return Objects.equals(id, other.id);
 	}
 }
