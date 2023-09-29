@@ -22,6 +22,13 @@ public class Setor {
 	
 	@OneToMany(mappedBy = "setor")
 	private List<Cargo> cargos;
+	
+	public Setor() {}
+	
+	public Setor(String nome, List<Cargo> cargos) {
+		this.nome = nome;
+		this.cargos = cargos;
+	}
 
 	public Long getId() {
 		return id;

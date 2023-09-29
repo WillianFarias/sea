@@ -28,8 +28,7 @@ public class Trabalhador {
 	
 	public Trabalhador() {}
 	
-	public Trabalhador(Long id, String cpf, String nome, Cargo cargo) {
-		this.id = id;
+	public Trabalhador(String cpf, String nome, Cargo cargo) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.cargo = cargo;

@@ -31,8 +31,10 @@ public class Cargo {
 
 	public Cargo() {}
 
-	public Cargo(String nome) {
+	public Cargo(String nome, Setor setor, List<Trabalhador> trabalhadores) {
 		this.nome = nome;
+		this.setor = setor;
+		this.trabalhadores = trabalhadores;
 	}
 
 	public Long getId() {
