@@ -25,6 +25,12 @@ dependencies {
 	// https://mvnrepository.com/artifact/junit/junit
 	testImplementation("junit:junit:4.13.1")
 	
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation("io.springfox:springfox-swagger-ui:2.9.2")
+	
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+	implementation("io.springfox:springfox-swagger2:2.9.2")
+	
 }
 
 tasks.withType<Test> {
